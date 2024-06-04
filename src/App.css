@@ -1,0 +1,41 @@
+body {
+	color: #dd7403; /* Set the background color to black */
+	background: #23224a; /* Set the text color to orange */
+  }
+
+.movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+
+/* Reduce the gap between image containers */
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
+	margin-right: 0.5px; /* Adjust the value as needed */
+}
+
+.image-container:last-child {
+	margin-right: 0; /* Remove the margin from the last item */
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+}
